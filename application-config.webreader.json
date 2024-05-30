@@ -1,0 +1,27 @@
+{
+   "appconfig" : {},
+   "duration" : "10",
+   "issues" : [
+      {
+         "appleId" : "",
+         "bundle" : "20240529T221021Z",
+         "bundleSize" : 1,
+         "description" : "Html5",
+         "id" : "urn:uuid:quark:html5:QuarkXPress_Project1:publication",
+         "isFree" : true,
+         "lastPublishedDate" : "2024-05-29T22:10:35Z",
+         "media:content" : [],
+         "media:thumbnail" : [],
+         "minimumAppVersion" : "1.0.0",
+         "previews" : {},
+         "publishedDate" : "2024-05-29T22:10:35Z",
+         "subtitle" : "Html5",
+         "tabletIssuePath" : "Html5",
+         "thumbnails" : {},
+         "title" : "QuarkXPress Project1"
+      }
+   ],
+   "name" : "Web Reader",
+   "published" : "2024-05-29T22:10:35Z",
+   "version" : "1.0"
+}

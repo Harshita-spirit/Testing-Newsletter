@@ -1,0 +1,143 @@
+{
+  "app": {
+    "title": "Quark App Studio Web App",
+    "summary": "Pub description/summary goes here",
+    "urlRoot": "./",
+    "configFilename": "application-config.webreader.json",
+    "orientation": {
+      "mobile": "both",
+      "desktop": "both"
+    },
+    "privacy": {
+      "enableCookieBanner": false,
+      "cookieBannerMessage": "",
+      "cookieAcceptButtonText": "",
+      "cookieSource": "",
+      "cookieUrlButtonText": ""
+    },
+    "loading": {
+      "image": "images/loading-logo.png",
+      "backgroundColor": "#fff",
+      "color": "#333333"
+    }
+  },
+  "store": {
+    "enablePromoted": true
+  },
+  "banner": {
+    "source": "user-content/banner.zip",
+    "height": 250
+  },
+  "auth": {
+    "authToken": "ASauth",
+    "authRoot": "",
+    "level": "none",
+    "subscribeUrl": "",
+    "passwordRequestUrl": "",
+    "launchLogin": false,
+    "publicationCode": "",
+    "loginLabel": "signin",
+    "subscribeLabel": "subscribe"
+  },
+  "analytics": {
+    "GoogleAnalytics": {
+      "trackingId": "",
+      "enhancedLinkAttribution": false,
+      "anonymizeIp": true
+    }
+  },
+  "smartBanner": {
+    "android": {
+      "enabled": true,
+      "id": "com.quark.appstudio"
+    },
+    "ios": {
+      "enabled": true,
+      "id": "com.quark.appstudioissuepreviewer"
+    }
+  },
+  "spreadView": {
+    "showLandscapeFacing": {
+      "mobile": false,
+      "desktop": true
+    }
+  },
+  "features": {
+    "toc": true,
+    "banner": false,
+    "toolbar": true,
+    "pageFit": true,
+    "sharing": true,
+    "scrubber": true,
+    "analytics": true,
+    "fullScreen": true,
+    "spreadView": true,
+    "flipbook": true,
+    "smartBanner": true,
+    "authorization": true,
+    "pageNavigation": true,
+    "variantSwitching": true,
+    "globalAudioPlayer": true,
+    "storeAccessibility": true
+  },
+  "flipbook": {
+    "defaultView": false,
+    "mobile": true,
+    "desktop": true
+  },
+  "pageNavigation": {
+    "transition": "fade",
+    "showArrowsForMobile": false,
+    "showArrowsForDesktop": true
+  },
+  "toolbar": {
+    "visibility": "auto",
+    "items": [
+      "storeButton",
+      "tocButton",
+      "scrubberBar",
+      "pageFitButton",
+      "spreadViewButton",
+      "flipbookViewButton",
+      "sharingButton",
+      "globalAudioButton",
+      "fullScreenButton"
+    ]
+  },
+  "googlemaps": {
+    "key": ""
+  },
+  "pageFit": {
+    "defaultMode": "autoFit",
+    "maxScaleForAutoFit": 4
+  },
+  "toc": {
+    "banner": true,
+    "showInitially": false,
+    "tocNonHtml": {
+      "titleLines": 4,
+      "showImage": false,
+      "showHTMLTitle": false,
+      "showDescription": true,
+      "descriptionLines": 2
+    }
+  },
+  "scrubber": {
+    "filmStrip": true
+  },
+  "filmStrip": {
+    "showInitially": false,
+    "mouseHoverNavigation": false
+  },
+  "sharing": {
+    "facebook": {
+      "AppID": ""
+    },
+    "options": {
+      "facebookShare": true,
+      "twitterShare": true,
+      "emailShare": true,
+      "linkedinShare": true
+    }
+  }
+}

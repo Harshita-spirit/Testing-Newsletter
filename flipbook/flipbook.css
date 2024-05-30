@@ -1,0 +1,734 @@
+.page {
+	background-color: grey;
+}
+
+.qbook {
+	position: relative;
+	zoom: 1;
+	-ms-text-size-adjust: auto;
+	-webkit-text-size-adjust: auto;
+	overflow: hidden !important;
+	margin: auto !important;
+}
+
+.qbook *,
+.qbook-container * {
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+
+.qbook-origin {
+	z-index: 1;
+}
+
+.qbook-page {
+	zoom: 1;
+}
+
+.qbook-page-content {
+	position: absolute;
+	overflow: hidden;
+	background: white;
+	zoom: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+.qbook-loading .qbook-page-content {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+
+.qbook-loading .qbook-zoomcontent {
+	opacity: 0;
+}
+
+.qbook-zoomcontent {
+	opacity: 1;
+	-webkit-transition: opacity 0.5s ease-in;
+	-moz-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	-ms-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+
+.qbook.qbook-loading {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+img.qbook-lazy {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.qbook-fullscreen-fix {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.qbook-handle {
+	cursor: pointer;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 32px;
+	z-index: 100001;
+	-webkit-transform: translate3d(0px, 0px, 10000px);
+}
+
+.qbook-handle.qbook-disabled {
+	display: none;
+}
+
+.qbook-unselectable {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.qbook-page-content.qbook-double-page {
+	padding: 0;
+}
+
+.qbook-hardpage {
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.qbook-3d-border {
+	background: #eee;
+	height: 100%;
+	left: 100%;
+	position: absolute;
+	top: 0;
+	width: 5px;
+	-moz-transform: rotateY(90deg);
+	-o-transform: rotateY(90deg);
+	-webkit-transform: rotateY(90deg);
+	-ms-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+	-moz-transform-origin: 0 0 0;
+	-o-transform-origin: 0 0 0;
+	-webkit-transform-origin: 0 0 0;
+	-ms-transform-origin: 0 0 0;
+	transform-origin: 0 0 0;
+}
+
+.qbook-left .qbook-3d-border {
+	left: 0;
+}
+
+
+.qbook-shadow-clipper {
+	position: absolute;
+	overflow: hidden;
+	z-index: 999;
+	zoom: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+.qbook-shadow-container {
+	display: none;
+	position: absolute;
+	z-index: 999;
+	zoom: 1;
+}
+
+.qbook-shadow-internal {
+	height: 500px;
+	width: 200px;
+	position: absolute;
+	zoom: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+.qbook-shadow-fold {
+	height: 500px;
+	width: 100px;
+	position: absolute;
+	zoom: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+.qbook-shadow-fold-flipped {}
+
+.qbook-fold-gradient {
+	height: 500px;
+	width: 125px;
+	position: absolute;
+	top: 0;
+	zoom: 1;
+	-webkit-backface-visibility: hidden;
+}
+
+.qbook-fold-gradient-flipped {}
+
+.qbook-fold-gradient-container {
+	position: absolute;
+	z-index: 1001;
+}
+
+.qbook-gutter-shadow {
+	height: 100%;
+	width: 40px;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.qbook-hard-page-shadow {
+	background: rgba(0, 0, 0, 0.2);
+	left: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transform: translatez(0);
+	-webkit-transform: translatez(0);
+}
+
+.qbook-hard-page-dropshadow {
+	background: #888;
+	box-shadow: 0 0 7px 0px #666;
+	background: rgba(96, 96, 96, 0.5);
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	transform: translatez(0);
+	-webkit-transform: translatez(0);
+}
+
+.qbook-book-shadow {
+	-moz-box-shadow: 0 0 7px #666;
+	-ms-box-shadow: 0 0 7px #666;
+	-webkit-box-shadow: 0 0 7px #666;
+	-o-box-shadow: 0 0 7px #666;
+	box-shadow: 0 0 7px #666;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	.qbook-shadow-internal,
+	.qbook-gutter-shadow,
+	.qbook-fold-gradient,
+	.qbook-shadow-fold {
+		image-rendering: pixelated;
+	}
+}
+
+.qbook-page-number {
+	bottom: 0;
+	padding-bottom: 0.3em;
+	position: absolute;
+	z-index: 1;
+}
+
+.qbook-left .qbook-page-number {
+	left: 0;
+	padding-left: 0.5em;
+}
+
+.qbook-right .qbook-page-number {
+	right: 0;
+	padding-right: 0.5em;
+}
+.qbook-overlay {
+	left: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 100000;
+}
+
+.qbook-horizontal{
+	width: 100%;
+}
+
+.qbook-horizontal .qbook-clipper {
+	height: 100%;
+	position: relative;
+	margin: 0 30px;
+}
+
+.qbook-horizontal ul {
+	display: inline-block;
+	display: inline;
+	zoom: 1;
+	white-space: nowrap;
+}
+
+.qbook-horizontal .qbook-button {
+	width: 30px;
+	min-width: unset;
+	height: 100%;
+	text-align: center;
+}
+
+.qbook-horizontal .qbook-button:after {
+	content: "\f053";
+}
+
+.qbook-horizontal .qbook-next.qbook-button:after {
+	content: "\f054";
+}
+
+.qbook-horizontal .qbook-next.qbook-button {
+	left: auto;
+	right: 0;
+}
+
+
+.qbook-vertical {
+	display: inline-block;
+	height: 100%;
+}
+
+.qbook-vertical .qbook-clipper {
+	position: absolute;
+	top: 30px;
+	bottom: 30px;
+}
+
+.qbook-vertical .qbook-button {
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+}
+
+.qbook-vertical.qbook-button:after {
+	vertical-align: baseline;
+}
+
+.qbook-vertical .qbook-next.qbook-button {
+	bottom: 0;
+	top: auto;
+}
+
+.qbook-vertical .qbook-button:after {
+	content: "\f077";
+}
+
+.qbook-vertical .qbook-next.qbook-button:after {
+	content: "\f078";
+}
+
+.qbook-draggable {
+	cursor: hand;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	-moz-user-select: none;
+}
+
+.qbook-draggable.qbook-dragging {
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+}
+
+.qbook-container {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.qbook-book-container {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.qbook-book-container .qbook {
+	margin: auto;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.qbook-container-full {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.fa-th:before {
+	content: "\f00a";
+}
+
+.fa-close:before {
+	content: "\f00d";
+}
+
+.fa-remove:before {
+	content: "\f00d";
+}
+
+.fa-binoculars:before {
+	content: "\f1e5";
+}
+
+.fa-search:before {
+	content: "\f002";
+}
+
+.fa-search-plus:before {
+	content: "\f00e";
+}
+
+.fa-search-minus:before {
+	content: "\f010";
+}
+
+.fa-home:before {
+	content: "\f015";
+}
+
+.fa-download:before {
+	content: "\f019";
+}
+
+.fa-volume-off:before {
+	content: "\f026";
+}
+
+.fa-volume-up:before {
+	content: "\f028";
+}
+
+.fa-play:before {
+	content: "\f04b";
+}
+
+.fa-pause:before {
+	content: "\f04c";
+}
+
+.fa-eject:before {
+	content: "\f052";
+}
+
+.fa-chevron-left:before {
+	content: "\f053";
+}
+
+.fa-chevron-right:before {
+	content: "\f054";
+}
+
+.fa-expand:before {
+	content: "\f065";
+}
+
+.fa-compress:before {
+	content: "\f066";
+}
+
+.fa-chevron-up:before {
+	content: "\f077";
+}
+
+.fa-chevron-down:before {
+	content: "\f078";
+}
+
+.fa-list-ul:before {
+	content: "\f0ca";
+}
+
+.fa-envelope-o:before {
+	content: "\f003";
+}
+
+.fa-twitter:before {
+	content: "\f099";
+}
+
+.fa-facebook:before {
+	content: "\f09a";
+}
+
+.fa-facebook-f:before {
+	content: "\f09a";
+}
+
+.fa-pinterest:before {
+	content: "\f0d2";
+}
+
+.fa-google-plus:before {
+	content: "\f0d5";
+}
+
+.fa-envelope:before {
+	content: "\f0e0";
+}
+
+.fa-linkedin:before {
+	content: "\f0e1";
+}
+
+.fa-reddit:before {
+	content: "\f1a1";
+}
+
+.fa-stumbleupon:before {
+	content: "\f1a4";
+}
+
+.icon-home:before {
+	content: "\e900";
+}
+
+.icon-download:before {
+	content: "\e960";
+}
+
+.icon-binoculars:before {
+	content: "\e985";
+}
+
+.icon-search:before {
+	content: "\e986";
+}
+
+.icon-zoom-in:before {
+	content: "\e987";
+}
+
+.icon-zoom-out:before {
+	content: "\e988";
+}
+
+.icon-enlarge:before {
+	content: "\e989";
+}
+
+.icon-shrink:before {
+	content: "\e98a";
+}
+
+.icon-list:before {
+	content: "\e9ba";
+}
+
+.icon-list2:before {
+	content: "\e9bb";
+}
+
+.icon-cloud-download:before {
+	content: "\e9c2";
+}
+
+.icon-download3:before {
+	content: "\e9c7";
+}
+
+.icon-cancel-circle:before {
+	content: "\ea0d";
+}
+
+.icon-play2:before {
+	content: "\ea15";
+}
+
+.icon-pause:before {
+	content: "\ea16";
+}
+
+.icon-backward:before {
+	content: "\ea1a";
+}
+
+.icon-forward2:before {
+	content: "\ea1b";
+}
+
+.icon-eject:before {
+	content: "\ea25";
+}
+
+.icon-volume-high:before {
+	content: "\ea26";
+}
+
+.icon-volume-mute2:before {
+	content: "\ea2a";
+}
+
+.icon-circle-up:before {
+	content: "\ea41";
+}
+
+.icon-circle-right:before {
+	content: "\ea42";
+}
+
+.icon-circle-down:before {
+	content: "\ea43";
+}
+
+.icon-circle-left:before {
+	content: "\ea44";
+}
+
+.icon-table2:before {
+	content: "\ea71";
+}
+
+.qbook-close i:before {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: "\ea0d";
+	font-size: bigger;
+}
+
+
+.qbook-hidden {
+	display: none;
+}
+
+.qbook-input-page {
+	box-sizing: border-box;
+	line-height: normal;
+	text-align: center;
+	vertical-align: middle !important;
+	width: 90%;
+	left: 5%;
+	position: absolute;
+	border: 1px solid gray;
+	color: black;
+}
+
+.qbook-find-text-container {
+	display: inline-block;
+	position: relative;
+}
+
+.qbook-find-count {
+	position: absolute;
+	right: 0;
+	color: black;
+	padding-right: 8px;
+}
+
+input.qbook-find-text {
+	line-height: normal;
+	color: initial;
+}
+
+.qbook-find-count {
+	display: inline-block;
+}
+
+@keyframes qbook-flash-animation {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
+.qbook .highlight.selected {
+	animation-name: qbook-flash-animation;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-iteration-count: 10;
+}
+
+.qbook-cs-white {
+	color: #737373;
+	background: #fbfbfb;
+	border-color: #080808;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.qbook-cs-white h1 {
+	color: inherit;
+	padding-left: 10px;
+}
+
+.qbook-cs-white .qbook-close {
+	background: transparent;
+	color: #adadad;
+	margin-right: 10px;
+	border: 1px solid #f3f3f3;
+	border-radius: 2px;
+}
+
+.qbook-cs-white qbook-close:hover {
+	background: #f5f5f5;
+	color: #262626;
+}
+
+.qbook-cs-white li {
+	border: none;
+}
+
+.qbook-cs-white a {
+	text-decoration: none;
+	border-top: 1px solid #f3f3f3;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+	color: inherit;
+	text-decoration: none;
+}
+
+.qbook-cs-white a:hover {
+	background: #f5f5f5;
+	color: #262626;
+}
+
+.qbook-cs-white.qbook-vertical .qbook-back.qbook-button {
+	border-width: 0 0 1px 0;
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.qbook-cs-white.qbook-vertical .qbook-next.qbook-button {
+	border-width: 1px 0 0 0;
+	box-shadow: 0 -4px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.qbook-cs-white.qbook-horizontal .qbook-back.qbook-button {
+	border-width: 0 1px 0 0;
+	box-shadow: 4px 0 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.qbook-cs-white.qbook-horizontal .qbook-next.qbook-button {
+	border-width: 0 0 0 1px;
+	box-shadow: -4px 0 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.qbook-cs-white .qbook-button {
+	color: #737373;
+	background: white;
+	border: 0px solid #d3d3d3;
+	z-index: 1;
+}
+
+.qbook-cs-white.qbook-button:hover {
+	color: #262626;
+	background: #f5f5f5;
+}
